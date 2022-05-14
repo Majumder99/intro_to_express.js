@@ -29,10 +29,11 @@ router.post("/", (req, res) => {
   };
 
   if (!newMember.name || !newMember.email) {
-    return res.status(400).json({ msg: "please iclude a name and email" });
+    return res.status(400).json({ msg: "please include a name and email" });
   }
   members.push(newMember);
   res.json(members);
+  // res.redirect("/"); //We will use this when we want to add data in the same page or redirect to same page
 });
 
 //Update Member
